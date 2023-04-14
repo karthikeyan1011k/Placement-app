@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-//require('dotenv').config();
-const PORT = process.env.PORT || 7878;
+require('dotenv').config();
+const PORT = 8002;
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const db = require('./config/mongoose');
@@ -34,14 +34,14 @@ app.set('views','./views');
 app.use(
     session({
         name:"placement-cell-web-app",
-        secret:"somethingNew",//secret to be same as cookie-parser, although cookie parser not necessary
+        secret:"heyman",//secret to be same as cookie-parser, although cookie parser not necessary
         saveUninitialized:false,//don't create session until something stored
         resave:false,//don't save session if unmodified
         cookie:{
             maxAge: 1000*60*60 //time in milliseconds
         },
         store: MongoStore.create({
-            mongoUrl: "mongodb://127.0.0.1:27017/Placement_cell_app",
+            mongoUrl: process.env.MONGO_URI,
             autoRemove:'disabled'
         }),function(err){
             if(err) console.log('Error in creating mongo setup for session cookies');

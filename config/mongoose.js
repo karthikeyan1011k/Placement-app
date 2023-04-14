@@ -1,7 +1,7 @@
 const mongoose  = require('mongoose');
 
 //connect to MongoDB cloud URI
-mongoose.connect("mongodb://127.0.0.1:27017/Placement_cell_app");
+mongoose.connect(process.env.MONGO_URI);
 
 //acquire the connection 
 const db = mongoose.connection;
@@ -9,7 +9,7 @@ const db = mongoose.connection;
 //if error
 db.on("error", function(err){console.log(`Error in connecting to DB: ${err}`)});
 
-//successfully conneted
+//successfully connected
 db.once('open',()=>{
     console.log('Successfully connected to db');
 });
