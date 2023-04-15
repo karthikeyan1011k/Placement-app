@@ -41,7 +41,7 @@ app.use(
             maxAge: 1000*60*60 //time in milliseconds
         },
         store: MongoStore.create({
-            mongoUrl: process.env.MONGO_URI,
+            mongoUrl: "mongodb+srv://karthikeyan1011k:semPPBy0sewCA7KQ@cluster0.xh3vjnn.mongodb.net/?retryWrites=true&w=majority",
             autoRemove:'disabled'
         }),function(err){
             if(err) console.log('Error in creating mongo setup for session cookies');
