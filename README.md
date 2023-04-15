@@ -15,8 +15,8 @@
  git clone git@github.com:karthikeyan1011k/placement-app.git
  ```
  * run the command `npm install` in terminal to install all dependencies
- * run the command `node index` in terminal to start the server on port 8000
- * open up browser and type `localhost:8000` in URL and you're good to go
+ * run the command `node index` in terminal to start the server on port 8002
+ * open up browser and type `localhost:8002` in URL and you're good to go
 
 ### Tech Used:
 
