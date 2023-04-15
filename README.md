@@ -1,6 +1,4 @@
 # Placement-app
-A web app where user can create account, manage students, schedule and allocate students to interviews, add scores & update results.
- * Hosted on railways app. Click [here](https://placement-cell-production-7644.up.railway.app/)
 
 ## Features:
   * Create account
@@ -14,7 +12,7 @@ A web app where user can create account, manage students, schedule and allocate 
  * Fork the project by clicking Fork Button.
  * Clone the forked repository in your local system by running following the command in code editor terminal (e.g. VS code)
  ```
- git clone git@github.com:prashantsingh896/placement-cell.git
+ git clone git@github.com:karthikeyan1011k/placement-app.git
  ```
  * run the command `npm install` in terminal to install all dependencies
  * run the command `node index` in terminal to start the server on port 8000
