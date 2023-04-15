@@ -34,14 +34,14 @@ app.set('views','./views');
 app.use(
     session({
         name:"placement-cell-web-app",
-        secret:"heyman",//secret to be same as cookie-parser, although cookie parser not necessary
+        secret: process.env.EXPRESS_SESSION_SECRE,//secret to be same as cookie-parser, although cookie parser not necessary
         saveUninitialized:false,//don't create session until something stored
         resave:false,//don't save session if unmodified
         cookie:{
             maxAge: 1000*60*60 //time in milliseconds
         },
         store: MongoStore.create({
-            mongoUrl: "mongodb+srv://karthikeyan1011k:semPPBy0sewCA7KQ@cluster0.xh3vjnn.mongodb.net/?retryWrites=true&w=majority",
+            mongoUrl: process.env.MONGO_URI,
             autoRemove:'disabled'
         }),function(err){
             if(err) console.log('Error in creating mongo setup for session cookies');
