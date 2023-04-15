@@ -1,7 +1,7 @@
 const mongoose  = require('mongoose');
 
 //connect to MongoDB cloud URI
-mongoose.connect("mongodb+srv://karthikeyan1011k:semPPBy0sewCA7KQ@cluster0.xh3vjnn.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URI);
 
 //acquire the connection 
 const db = mongoose.connection;
